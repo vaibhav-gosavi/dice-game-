@@ -21,7 +21,7 @@ export default function App() {
 
   const fetchBalance = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/balance")
+      const res = await axios.get("https://dice-game-virid-three.vercel.app/balance")
       setBalance(res.data.balance)
     } catch (error) {
       console.error("Error fetching balance:", error)
@@ -39,7 +39,7 @@ export default function App() {
     try {
       const generatedClientSeed = Math.random().toString(36).substring(2, 15)
       setClientSeed(generatedClientSeed)
-      const res = await axios.post("http://localhost:5000/roll-dice", {
+      const res = await axios.post("https://dice-game-virid-three.vercel.app/roll-dice", {
         betAmount,
         clientSeed: generatedClientSeed,
       })

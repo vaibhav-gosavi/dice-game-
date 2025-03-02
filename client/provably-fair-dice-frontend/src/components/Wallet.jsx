@@ -26,7 +26,7 @@ export default function Wallet() {
       const fakeWalletAddress = generateFakeWalletAddress();
 
       // Send the fake address to the backend
-      const res = await axios.post("http://localhost:5000/connect-wallet", {
+      const res = await axios.post("https://dice-game-virid-three.vercel.app/connect-wallet", {
         address: fakeWalletAddress,
       });
 
@@ -44,7 +44,7 @@ export default function Wallet() {
 
   const fetchWalletBalance = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/wallet-balance");
+      const res = await axios.get("https://dice-game-virid-three.vercel.app/wallet-balance");
       setWalletBalance(res.data.cryptoBalance);
     } catch (error) {
       console.error("Error fetching wallet balance:", error);
