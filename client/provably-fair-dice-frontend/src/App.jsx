@@ -151,7 +151,7 @@ export default function App() {
             <div className="mb-6">
               <div className="flex justify-between mb-2">
                 <span className="text-slate-400">Bet Amount</span>
-                <span className="text-slate-400">₹{balance.toFixed(2)}</span>
+                <span className="text-slate-400">${balance.toFixed(2)}</span>
               </div>
               <div className="flex">
                 <div className="relative flex-1">
@@ -188,7 +188,7 @@ export default function App() {
             <div className="mb-6">
               <div className="flex justify-between mb-2">
                 <span className="text-slate-400">Profit on Win</span>
-                <span className="text-slate-400">₹0.00</span>
+                <span className="text-slate-400">$0.00</span>
               </div>
               <div className="relative">
                 <input
