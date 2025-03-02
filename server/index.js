@@ -25,6 +25,10 @@ const generateHash = (serverSeed) => {
     return crypto.createHash('sha256').update(serverSeed).digest('hex');
 };
 
+app.get('/', (req, res) => {
+    res.send('Provably Fair Dice API');
+});
+
 // API endpoint for rolling the dice
 app.post('/roll-dice', (req, res) => {
     const { betAmount, clientSeed } = req.body;
